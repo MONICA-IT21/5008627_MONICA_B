@@ -1,0 +1,26 @@
+implementation 'org.springframework.boot:spring-boot-starter-web'
+implementation 'com.fasterxml.jackson.core:jackson-databind'
+implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+implementation 'org.springframework.boot:spring-boot-starter-actuator'
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+}
+dependencies {
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    // Mockito
+    testImplementation 'org.mockito:mockito-core:4.5.1'
+
+    // Spring Boot Test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+dependencies {
+    // Spring Boot Test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // H2 Database
+    testImplementation 'com.h2database:h2'
+}

@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: online-bookstore
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      # Customize the endpoints you want to expose
+      # include: "health,info,metrics"
+    security:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+
+server:
+  port: 8080
+
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
